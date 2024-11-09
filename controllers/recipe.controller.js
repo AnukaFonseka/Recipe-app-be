@@ -1,4 +1,4 @@
-const recipeService = require('../services/recipe.service');
+const recipeService = require("../services/recipe.service");
 
 async function fetchRecipesByCategory(req, res) {
   const { category } = req.params;
@@ -7,8 +7,8 @@ async function fetchRecipesByCategory(req, res) {
     const recipes = await recipeService.getRecipesByCategory(category);
     res.status(200).json(recipes);
   } catch (error) {
-    console.error('Error fetching recipes:', error);
-    res.status(500).json({ message: 'Failed to fetch recipes' });
+    console.error("Error fetching recipes:", error);
+    res.status(500).json({ message: "Failed to fetch recipes" });
   }
 }
 
