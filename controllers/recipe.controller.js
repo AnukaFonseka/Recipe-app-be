@@ -1,5 +1,6 @@
 const recipeService = require('../services/recipe.service');
 
+//Fetch all recipes by category
 async function fetchRecipesByCategory(req, res) {
   const { category } = req.params;
 
@@ -12,6 +13,7 @@ async function fetchRecipesByCategory(req, res) {
   }
 }
 
+//Fetch a recipe by the recipe ID
 async function fetchRecipesById(req, res) {
   const { id } = req.params;
 
